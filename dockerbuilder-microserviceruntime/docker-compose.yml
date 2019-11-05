@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  msr:
+    image: softwareag/msrbuild:10.3
+    build:
+      context: .
+      args:
+        - BUILDER_IMAGE=store/softwareag/commandcentral-builder:10.3  # Use the latest available builder image
+        - NODE_IMAGE=store/softwareag/commandcentral-node:10.3 # Use node image for the target release
+        - REPO_PRODUCT_URL=https://sdc.softwareag.com/dataservewebM103/repository # product repository must match target release
+        - REPO_FIX_URL=https://sdc.softwareag.com/updates/prodRepo # fix repository must have fixes for the target release
+        - REPO_USERNAME=${EMPOWER_USR} # repo credentials
+        - REPO_PASSWORD=${EMPOWER_PSW} # repo credentials
+        - BASE_IMAGE=centos:7 # base image
+    ports:
+      - 5555
+

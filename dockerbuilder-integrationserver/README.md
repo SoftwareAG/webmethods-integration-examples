@@ -71,7 +71,7 @@ set EMPOWER_PSW=*****
 To build the microservice container image run:
 
 ```bash
-docker-compose build msr
+docker-compose build is
 
 ...
 Successfully tagged softwareag/isbuild:10.3

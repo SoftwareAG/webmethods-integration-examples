@@ -27,8 +27,7 @@ on [Docker Store](https://store.docker.com/images/softwareag-commandcentral).
 
 * Docker Engine 17.05 or newer with support for [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
 * Access to Empower with the right to download software
-* A valid license file for Microservice Runtime
-
+* A valid license file for Integrationserver
 ## Preparation
 
 ### Get dockerbuilder

@@ -67,7 +67,7 @@ set EMPOWER_PSW=*****
 
 ## Building images
 
-To build the microservice container image run:
+To build the Integrationserver container image run:
 
 ```bash
 docker-compose build is

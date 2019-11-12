@@ -1,5 +1,5 @@
 # webmethods-integration-examples
-Collection of examples for using webMethods Integration platform. This is intended to give you starting points for common problems and use cases.
+Collection of examples for using webMethods Integration platform. This is intended to give you starting points for common problems and use cases. webMethods is a multiplatform enterprise integration server that supports integration of diverse services such as mapping data between formats and communication between systems.
 
 ## Docker
 
@@ -9,3 +9,12 @@ Those examples show you how to use dockerbuilder to create you own images using 
 
 1. [Dockerbuilder example for Integration Server](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-integrationserver)
 2. [Dockerbuilder example for Microservice Runtime](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-microserviceruntime)
+
+______________________
+For more information you can Ask a Question in the [TECHcommunity Forums](http://techcommunity.softwareag.com/home/-/product/name/command-central).
+
+You can find additional information in the [Software AG TECHcommunity](http://tech.forums.softwareag.com/techjforum/forums/list.page?product=command-central).
+______________________
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+
+Contact us at [TECHcommunity](mailto:technologycommunity@softwareag.com?subject=Github/SoftwareAG) if you have any questions.

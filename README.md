@@ -10,6 +10,13 @@ Those examples show you how to use dockerbuilder to create you own images using 
 1. [Dockerbuilder example for Integration Server](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-integrationserver)
 2. [Dockerbuilder example for Microservice Runtime](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-microserviceruntime)
 
+## Service Designer
+
+Those examples show you how to use Service Designer to quickly develop typical services and/or integrations. They are mainly intented to show typical concepts, so they will not be "production ready" as rhey are!
+
+1. [Dynamic conversion of a flat file to xml or json]
+This demostrates the usage of service Desginer to build docker containers and exposing Rest APIs. The example will convert a csv dynamically toxmlor json.
+
 ______________________
 For more information you can Ask a Question in the [TECHcommunity Forums](http://techcommunity.softwareag.com/home/-/product/name/command-central).
 

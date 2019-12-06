@@ -16,7 +16,8 @@ A more extensive description, especially a tutorial how to build the code yourse
 
 ## Requirements
 
-* Docker Engine 17.05 or newer 
+* Windows 10 or Windows 2019 Server
+* Docker for Windows with Engine 19.03 or newer  
 
 ## Preparation
 

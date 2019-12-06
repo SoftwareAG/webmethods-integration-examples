@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">DemoCSVConverter.Rest.CSVParser_.docTypes:CSVParser</value>
+    <value name="node_pkg">Demo_CSV_Converter</value>
+    <value name="is_public">false</value>
+    <value name="field_name">CSVParser</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">false</value>
+  </record>
+</Values>

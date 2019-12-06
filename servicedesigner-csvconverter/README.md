@@ -3,6 +3,7 @@
 This example shows you how to use service designer to
 
 * create services for transforing an arbitrary CSV file to xml or json
+* expose the services as Rest API.
 * build a docker image hosting those services
 
 webMethods Service Designer is a lightweight integrated design and development tool that includes:

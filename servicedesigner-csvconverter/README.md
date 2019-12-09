@@ -12,7 +12,7 @@ webMethods Service Designer is a lightweight integrated design and development t
 * Unit Test Framework for creating unit tests for the services that you develop and include in Continuous Integration for build verification.
 * webMethods Microservices Runtime (referred to as Local Development Server) for deploying and testing the assets.
 
-A more extensive description, especially a tutorial how to build the code yourself can be found in the following Techcommunity article: http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Build%20a%20microservice%20converting%20csv%20flat%20file%20to%20xml%20or%20json%20using%20Service%20Designer
+A more extensive description, especially a tutorial how to build the code yourself can be found in the Techcommunity [article] (http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Build%20a%20microservice%20converting%20csv%20flat%20file%20to%20xml%20or%20json%20using%20Service%20Designer)
 
 ## Requirements
 

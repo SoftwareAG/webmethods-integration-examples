@@ -14,6 +14,8 @@ webMethods Service Designer is a lightweight integrated design and development t
 
 A more extensive description, especially a tutorial how to build the code yourself can be found in the Techcommunity [article](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Build%20a%20microservice%20converting%20csv%20flat%20file%20to%20xml%20or%20json%20using%20Service%20Designer).
 
+Disclaimer: Service Designer is intended for rapid prototyping, you need an appropriate license if using generated assets in production environments.
+
 ## Requirements
 
 * Windows 10 or Windows 2019 Server

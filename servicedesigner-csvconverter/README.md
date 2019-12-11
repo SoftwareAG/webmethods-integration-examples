@@ -47,6 +47,9 @@ The sample code is explained in this article in techcommunity:
 
 Import the sample code 
 
+If you want to get the package properly into your workspace using the git integration of designer, please have a look at [my article about getting packages from git or github into Service Designer](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Get%20a%20webmethods%20package%20from%20github%20into%20your%20service%20designer).
+
+If you want to have it quick and easy, 
 * Copy the directory Demo_CSV_Converter (located inside ISPackages ) inside C:\Programs\wMServiceDesigner\IntegrationServer\packages (This is just for demo purposes and not a recommended way to deploy packages to a Microservice Runtime or Inetgration Server).
 * Go to it's admin page (http://localhost:5555/)
 * On the left side expande the Packages section, click Packages-Management

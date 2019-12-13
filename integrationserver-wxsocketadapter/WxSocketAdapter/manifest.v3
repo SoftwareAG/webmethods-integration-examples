@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">yes</value>
+  <value name="system_package">no</value>
+  <value name="version">1.1</value>
+  <value name="build">1</value>
+  <record name="startup_services" javaclass="com.wm.util.Values">
+    <null name="wm.wxSocketAdapter.admin:startUp"/>
+  </record>
+  <record name="shutdown_services" javaclass="com.wm.util.Values">
+    <null name="wm.wxSocketAdapter.admin:shutDown"/>
+  </record>
+  <null name="replication_services"/>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="WmART">*.*</value>
+  </record>
+  <null name="listACL"/>
+  <value name="webappLoad">yes</value>
+  <value name="name">WxSocketAdapter</value>
+  <value name="description"></value>
+  <value name="time">2019-11-19 18:01:10 MEZ</value>
+  <value name="jvm_version">1.8.0</value>
+  <value name="publisher">ttop.softwareag.com</value>
+  <value name="patch_nums"></value>
+</Values>

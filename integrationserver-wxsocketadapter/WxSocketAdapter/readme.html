@@ -1,0 +1,498 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<title>webMethods Adapter Development Kit 6.5 readme</title>
+<style>
+<!--
+
+/* Named Styles */
+
+.wm-rmBody {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-weight:        normal;
+	font-style:         normal;
+	margin-top:         12.0pt;
+	margin-right:       0in;
+	margin-bottom:      0in;
+	margin-left:        0in;  }
+
+
+.wm-rmBodyIndent {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-weight:        normal;
+	font-style:         normal;
+	margin-top:         12.0pt;
+	margin-right:       0in;
+	margin-bottom:      0in;
+	margin-left:       .25in;  }
+
+
+.wm-rmInstructionsToWriter
+ {
+	font-family:        "Times New Roman", "Times Roman", serif;
+	font-size:          9.0pt;
+	font-style:         italic;
+	font-weight:        normal;
+	color:              red;
+	margin-top:         6.0pt;
+	margin-right:       0in;
+	margin-bottom:      0in;
+	margin-left:        0in;  }
+
+
+.wm-rmBulletList {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-style:         normal;
+	font-weight:        normal;
+	margin-top:         9.0pt;
+	margin-right:       0in;
+	margin-bottom:      0in;
+	margin-left:       .25in;
+	text-indent:      -.25in;  }
+
+
+.wm-rmTableHead {
+	font-family:         Arial, Helvetica, sans-serif;
+	font-size:           9.0pt;
+	font-style:          normal;
+	font-weight:         bold;
+	margin-top:          12.0pt;
+	margin-right:        0in;
+	margin-bottom:       0in;
+	margin-left:         0in;
+	border:              bottom;
+	padding:             0in;  }
+
+
+.wm-rmTableCell {
+	font-family:         "Courier New", Courier, monospace;
+	font-size:           9.0pt;
+	font-style:          normal;
+	font-weight:         normal;
+	margin-top:          6.0pt;
+	margin-right:        0in;
+	margin-bottom:       3.0pt;
+	margin-left:         0in;
+	padding:             0in;  }
+
+
+/* Tag Styles */
+
+h1 {
+	font-family:     Arial, Helvetica, sans-serif;
+	font-size:           16.0pt;
+	font-style:          normal;
+	font-weight:         bold;
+	margin-top:          12.0pt;
+	margin-right:        0in;
+	margin-left:         0in;
+	margin-bottom:       3.0pt;
+	text-align:          center;  }
+
+
+h2 {
+	font-family:         Arial, Helvetica, sans-serif;
+	font-size:           14.0pt;
+	font-style:          normal;
+	font-weight:         bold;
+	margin-top:          12.0pt;
+	margin-right:        0in;
+	margin-left:         0in;
+	margin-bottom:       3.0pt;  }
+
+
+h3  {
+	font-family:         Arial, Helvetica, sans-serif;
+	font-size:           12.0pt;
+	font-style:          normal;
+	font-weight:         bold;
+	margin-top:         .25in;
+	margin-right:        0in;
+	margin-bottom:       0in;
+	margin-left:         0in;  }
+
+
+a:link {
+	color:               blue;
+	text-decoration:     none;  }
+
+
+a:visited {
+	color:               purple;
+	text-decoration:     none;  }
+
+
+a:hover {
+	text-decoration   :  underline; }
+
+
+p {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-weight:        normal;
+	font-style:         normal;
+	margin-top:         12.0pt;
+	margin-right:       0in;
+	margin-bottom:      0in;
+	margin-left:        0in;  }
+
+
+th {
+	font-family:         Arial, Helvetica, sans-serif;
+	font-size:           9.0pt;
+	font-style:          normal;
+	font-weight:         bold;
+	margin-top:          12.0pt;
+	margin-right:        0in;
+	margin-bottom:       0in;
+	margin-left:         0in;
+	border:              bottom;
+	padding:             0in;  }
+
+
+td {
+	font-family:         "Courier New", Courier, monospace;
+	font-size:           0.0pt;
+	font-style:          normal;
+	font-weight:         normal;
+	margin-top:          6.0pt;
+	margin-right:        0in;
+	margin-bottom:       0in;
+	padding:             0in;
+	margin-left:         0in;  }
+
+
+ul {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-style:         normal;
+	font-weight:        normal;
+	list-style :        square;  }
+
+
+ol {
+	font-family:        "Courier New", Courier, monospace;
+	font-size:          10.0pt;
+	font-style:         normal;
+	font-weight:        normal;  }
+
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1><a name="wmRM_title"></a><span class=GramE>webMethods</span> Adapter Development Kit 6.5 readme</h1>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2 align=center style='text-align:center'>February 2006</h2>
+
+</div>
+
+<p class=wm-rmBody>This file provides important information you should read
+before using the webMethods Adapter Development Kit 6.5 to build adapters that
+are compatible with the webMethods Integration Server 6.5 or later.</p>
+
+<p class=wm-rmBody>The <i>webMethods Adapter
+Development Kit Installation Guide</i> contains important information you must
+read before installing or upgrading to the webMethods Adapter Development Kit
+6.5. The webMethods Adapter Development Kit 6.5 documentation is available on
+request from the <span class=MsoHyperlink><a
+href="http://advantage.webmethods.com/article/?id=bookshelf_adapters_adk"
+target="_blank">webMethods Advantage Web site</a></span>.</p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2>Contents</h2>
+
+</div>
+
+<p class=wm-rmBody>1.0 <a href="#_1.0_Critical_Information">Critical Information</a></p>
+
+<p class=wm-rmBody>2.0 <a href="#_2.0_Known_Issues">Known Issues</a></p>
+
+<p class=wm-rmBody>3.0 <a href="#_3.0_Usage_Notes">Usage Notes</a></p>
+
+<p class=wm-rmBody>4.0 <a href="#_4.0_Enhancements_and_Fixes">Enhancements and
+Fixes</a></p>
+
+<p class=wm-rmBody>5.0 <a href="#_5.0_Deprecated_Items">Deprecated Items</a></p>
+
+<p class=wm-rmBody>6.0 <a href="#_6.0_Globalization">Globalization</a></p>
+
+<p class=wm-rmBody>    6.1 <a
+href="#_6.1_Localization_and">Localization and Certification</a></p>
+
+<p class=wm-rmBody>    6.2 <a
+href="#_6.2_Configuration">Configuration</a></p>
+
+<p class=wm-rmBody>    6.3 <a
+href="#_6.3_Known_Globalization">Known Globalization Issues</a></p>
+
+<p class=wm-rmBody><span lang=FR>7.0 </span><a
+href="#_7.0_Documentation"><span lang=FR>Documentation</span></a></p>
+
+<p class=wm-rmBody><span lang=FR>    7.1 </span><a
+href="#_7.1_Major_Documentation"><span lang=FR>Major
+Documentation Changes</span></a></p>
+
+<p class=wm-rmBody><span lang=FR>    7.2 </span><a
+href="#_7.2_Known_Documentation">Known<span lang=FR> Documentation Issues</span></a></p>
+
+<p class=wm-rmBody>8.0 <a href="#_8.0_Copyright_Information">Copyright Information</a></p>
+
+<p class=wm-rmBody>9.0 <a href="#_9.0_Contacting_webMethods">Contacting webMethods</a></p>
+
+<p class=wm-rmBody>10.0 <a href="#_10.0_Viewing_the">Viewing the readme for the
+Previous Version</a></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_1.0_Critical_Information"></a>1.0 Critical Information</h2>
+
+</div>
+
+<p class=wm-rmBody><span class=GramE>None.</span> </p>
+
+<p class=wm-rmBody>For late-breaking critical information, refer to the <span
+class=MsoHyperlink><a href="http://advantage.webmethods.com/criticalinfo"
+target=newwin>Critical Information area</a></span> on the <span
+class=MsoHyperlink><a href="http://advantage.webmethods.com/"target="_blank">webMethods
+Advantage Web site</a></span>. </p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_2.0_Known_Issues"></a>2.0 Known Issues</h2>
+
+</div>
+
+<p class=wm-rmBody><span class=GramE>None.</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_3.0_Usage_Notes"></a>3.0 Usage Notes</h2>
+
+</div>
+
+<p class=wm-rmBulletList><a name="_4.0_Enhancements_and"></a>-  The ADK provides a sample adapter package,
+WmSampleAdapter, which can be used as a model for developing adapters
+compatible with the webMethods Integration Server 6.5 or later. The Sample
+Adapter provides code to illustrate creating an adapter definition class and
+template classes for connections, adapter services, polling notifications, and
+listener notifications.</p>
+
+<p class=wm-rmBulletList>-  Also delivered
+with the Sample Adapter is a simulated back-end resource, Sample Server, to
+mimic a banking application. The Sample Server is delivered as a Java
+executable, configurable using a properties file.</p>
+
+<p class=wm-rmBulletList>-  For a complete
+description of the Sample Adapter and the Sample Server see Appendix D of the <i>webMethods
+Adapter Development Kit 6.5 User's Guide</i> in the &lt;Integration_Server_directory&gt;/doc/adk
+directory.</p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_4.0_Enhancements_and_Fixes"></a>4.0 Enhancements and Fixes</h2>
+
+</div>
+
+<p class=wm-rmBody>1-QN4QR <br>
+Provide hotlinks to server classes delivered with the IS Javadocs.</p>
+
+<p class=wm-rmBody>The javadocs delivered with the ADK contain references to
+Integration Server classes. Because these references are not hotlinked, the user
+cannot easily access the associated documentation. </p>
+
+<p class=wm-rmBody>This issue has been resolved. In the ADK 6.5 javadocs, the
+references to Integration Server classes are hotlinked. However, in order for
+the hotlinks to work, the Integration Server documentation must be installed in
+the default directory &lt;Integration_Server_directory&gt;\doc\api. For more
+information about installing the Integration Server documentation, see the <i>webMethods Installation Guide</i>.</p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_5.0_Deprecated_Items"></a>5.0 Deprecated Items</h2>
+
+</div>
+
+<p class=wm-rmBody><span class=GramE>None.</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_6.0_Globalization"></a>6.0 Globalization</h2>
+
+</div>
+
+<p class=wm-rmBody>The webMethods Adapter Development Kit conforms to the
+international standards of webMethods, which require: operation in any country,
+locale, or language configuration as listed in the <i>webMethods Installation Guide</i>; support for character encodings; and
+proper formatting, display, and validation of data (such as number and date
+formats). These features have been tested in this release and any known issues
+are listed below.</p>
+
+<h3><a name="_6.1_Localization_and"></a>6.1 Localization and Certification</h3>
+
+<p class=wm-rmBody><a name="_6.2_Configuration"></a>The webMethods Adapter
+Development Kit 6.5 provides support for developing and testing adapters that
+are internationalized and are localizable into different languages. Adapters
+created with this kit can include support for operation in any country, locale,
+or language. Support for character encodings and proper formatting, display,
+and validation of data (such as number and date formats) has been provided and
+adapters that are built using the webMethods Adapter Development Kit 6.5 have
+access to the webMethods Integration Platform's internal Unicode character set
+support, data types, and other international features and functionality.</p>
+
+<p class=wm-rmBody>The libraries, features, and capabilities of the Adapter
+Runtime and thus the functionality in the Adapter Development Kit have been
+tested extensively in non-English environments and with non-ASCII data,
+including complete testing in a Japanese environment. The Sample Adapter and
+simulated back-end resource have been tested in non-English locales and can be
+used as an example for coding resource bundles and other international
+features.&nbsp; </p>
+
+<h3>6.2 Configuration</h3>
+
+<p class=wm-rmBody>If you expect to display non-English data in your webMethods
+tools, make sure an appropriate font is installed in your operating
+environment. If you see hollow boxes or black squares where you expect to see
+non-English data, modify your JRE font.properties file to reference an
+appropriate font. For information on modifying your font.properties file, go to
+Sun's Java website. For instructions, see:</p>
+
+<p class=wm-rmBody><span class=MsoHyperlink><a
+href="http://java.sun.com/j2se/1.4.2/docs/guide/intl/fontprop.html"
+target="_blank">http://java.sun.com/j2se/1.4.2/docs/guide/intl/fontprop.html</a></span>
+</p>
+
+<p class=wm-rmBody><span class=MsoHyperlink><a
+href="http://www.unicode.org/help/display_problems.html" target="_blank">http://www.unicode.org/help/display_problems.html</a></span>
+</p>
+
+<h3><a name="_6.3_Known_Globalization"></a>6.3 Known Globalization Issues</h3>
+
+<p class=wm-rmBody><span class=GramE>None.</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_7.0_Documentation"></a>7.0 Documentation</h2>
+
+</div>
+
+<p class=wm-rmBody>For webMethods Adapter Development Kit 6.5 technical
+documentation, go to the &lt;Integration_Server_directory&gt;/doc/adk directory.
+The documentation is also available on request from the <span
+class=MsoHyperlink><a
+href="http://advantage.webmethods.com/article/?id=bookshelf_adapters_adk"
+target="_blank">webMethods Advantage Web site</a></span>. These manuals are
+provided as PDF files: </p>
+
+<p class=wm-rmBulletList>-  <span
+class=GramE><i>webMethods</i></span><i> Adapter Development Kit
+Installation Guide Version 6.5</i></p>
+
+<p class=wm-rmBulletList>-  <span
+class=GramE><i>webMethods</i></span><i> Adapter Development Kit
+User’s Guide Version 6.5</i></p>
+
+<p class=wm-rmBody>To view the documentation, you must have <span
+class=MsoHyperlink><a href="http://www.adobe.com/products/acrobat/readstep.html"
+target="_blank">Adobe Acrobat Reader 4.0 or later</a></span>.</p>
+
+<p class=wm-rmBody>For webMethods Adapter Development Kit 6.5 Javadocs, go to
+the &lt;Integration_Server_directory&gt;/doc/<span class=GramE>api/</span>adk
+directory. To view the Adapter Development Kit Javadocs, open the index.html
+file. The Javadocs are HTML files that describe the public APIs (packages,
+classes, interfaces, and methods) provided with the webMethods Integration
+Server.</p>
+
+<h3><a name="_7.1_Major_Documentation"></a>7.1 Major Documentation Changes</h3>
+
+<p class=wm-rmBody><span class=GramE>None.</span></p>
+
+<h3><a name="_7.2_Known_Documentation"></a>7.2 Known Documentation Issues</h3>
+
+<p class=wm-rmBody><span class=GramE>None.</span></p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_8.0_Copyright_Information"></a>8.0 Copyright Information</h2>
+
+</div>
+
+<p class=wm-rmBody>webMethods Access, webMethods Administrator, webMethods
+Broker, webMethods Dashboard, webMethods Developer, webMethods Fabric,
+webMethods Glue, webMethods Installer, webMethods Integration Server,
+webMethods Mainframe, webMethods Manager, webMethods Modeler, webMethods
+Monitor, webMethods Optimize, webMethods Portal, webMethods Servicenet,
+webMethods Trading Networks, and webMethods Workflow are trademarks of
+webMethods, Inc. webMethods and the webMethods logo are registered trademarks
+of webMethods, Inc.</p>
+
+<p class=wm-rmBody>All other marks are the property of their respective owners.
+</p>
+
+<p class=wm-rmBody>Copyright (c) 2006 by webMethods, Inc. All rights reserved,
+including the right of reproduction in whole or in part in any form.</p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_9.0_Contacting_webMethods"></a>9.0 Contacting webMethods</h2>
+
+</div>
+
+<p class=wm-rmBody>Authorized technical support contacts can reach webMethods
+Customer Care for support via:</p>
+
+<p class=wm-rmBody><b><span
+style='font-size:12.0pt;font-family:Arial'>Web:      </span></b><span class=MsoHyperlink><a
+href="http://advantage.webmethods.com/" target=newwin>webMethods Advantage</a></span>  webMethods online support center</p>
+
+<p class=wm-rmBody><b><span
+style='font-size:12.0pt;font-family:Arial'>E-mail:   </span></b><span class=MsoHyperlink><a
+href="mailto:support@webMethods.com">support@webMethods.com</a></span></p>
+
+<p class=wm-rmBody style='margin-left:.7in;text-indent:-.7in'><b><span style='font-size:12.0pt;font-family:
+Arial'>Phone:   </span></b><st1:place>North America</st1:place><span class=GramE>&nbsp; +</span>1-888-222-8215
+or +1 703 460 2584<br>
+<st1:place>Europe</st1:place>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++800 963 84-637 or +31 20 77 83 640<br>
+<st1:place>Asia</st1:place> Pacific&nbsp;&nbsp; +1 1-800-088-880 or
++61-2-8913 1111 <br>Japan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;0120-979-762 (Toll Free in <st1:country-region><st1:place>Japan</st1:place></st1:country-region>)&nbsp;<br>               or +81-3-6229-3751</p>
+
+<p class=wm-rmBody>In addition, self-service support is available in the <span
+class=MsoHyperlink><a
+href="http://advantage.webmethods.com/article/?id=536945150" target="_blank">webMethods
+Advantage Knowledge Base</a></span> and in the <span class=MsoHyperlink><a
+href="http://advantage.webmethods.com/forums" target=newwin>webMethods Advantage
+Customer Forums</a></span>.</p>
+
+<div style='border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in'>
+
+<h2><a name="_10.0_Viewing_the"></a>10.0 Viewing the readme for the Previous
+Version</h2>
+
+</div>
+
+<p class=wm-rmBody>To view information about the previous release of webMethods
+Adapter Development Kit, go to the &lt;Integration_Server_directory&gt;/doc/adk
+directory. The documentation is also available on request from the <span
+class=MsoHyperlink><a
+href="http://advantage.webmethods.com/article/?id=bookshelf_adapters_adk"
+target="_blank">webMethods Advantage Web site</a></span>.</p>
+
+<p class=wm-rmBody>ADK-RM-65-20060207</p>
+
+</div>
+
+</body>
+
+</html>

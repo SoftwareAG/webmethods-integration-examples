@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="code/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/opt/softwareag/IntegrationServer/packages/WmART/code/jars/wmart.jar"/>
+	<classpathentry kind="lib" path="/opt/softwareag/IntegrationServer/lib/wm-isserver.jar"/>
+	<classpathentry kind="lib" path="/opt/softwareag/common/lib/wm-isclient.jar"/>
+	<classpathentry kind="lib" path="/opt/softwareag/IntegrationServer/packages/WmART/code/classes"/>
+	<classpathentry kind="lib" path="/opt/softwareag/common/lib/glassfish/gf.jakarta.resource.jar"/>
+	<classpathentry kind="lib" path="/opt/softwareag/IntegrationServer/instances/default/packages/WxSocketAdapter/code/jars/static/jSerialComm-2.5.3.jar"/>
+	<classpathentry kind="output" path="code/classes"/>
+</classpath>

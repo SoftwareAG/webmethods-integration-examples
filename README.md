@@ -17,6 +17,13 @@ Those examples show you how to use Service Designer to quickly develop typical s
 1. [Dynamic conversion of a flat file to xml or json](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/servicedesigner-csvconverter)
 This demostrates the usage of service Desginer to build docker containers and exposing Rest APIs. The example will convert a csv dynamically toxmlor json.
 
+## Adapters
+
+Those examples show you how to develop, deploy, configure, and use custom coded Integration Server adapters and explain use cases the adapters can be used for.
+
+1. [WxSocketAdapter (source code, eclipse project, installation guide)](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/integrationserver-wxsocketadapter)
+This adapter demonstrates how to connect to low-level resources and devices within the Integration Server. It connects to TCP/IP raw sockets, as well as serial communication devices. It delivers two way communication to the devices and channels (reading/writing).
+
 ______________________
 For more information you can Ask a Question in the [TECHcommunity Forums](http://techcommunity.softwareag.com/home/-/product/name/command-central).
 

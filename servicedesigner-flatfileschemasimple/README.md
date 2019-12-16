@@ -5,7 +5,7 @@ This example shows you how to use service designer to
 * create a flat file schema via wizard to parse a file with a fixed structure.
 * Put and get input and output via ftp.
 
-A descirption hwo to build the complete example yourself can be found in [this article in our TECHCommunity](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Simple%20flat%20file%20parsing%20with%20the%20webMethods%20flat%20file%20adapter).
+A description hwo to build the complete example yourself can be found in [this article in our TECHCommunity](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Simple%20flat%20file%20parsing%20with%20the%20webMethods%20flat%20file%20adapter).
 
 webMethods Service Designer is a lightweight integrated design and development tool that includes:
 

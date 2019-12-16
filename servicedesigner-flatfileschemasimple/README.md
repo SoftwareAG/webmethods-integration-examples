@@ -1,4 +1,4 @@
-# Build a microservice converting csv flat file to xml or json using Service Designer 
+# Create a flatfile schema for converting csv flat file to xml or json using Service Designer 
 
 This example shows you how to use service designer to
 

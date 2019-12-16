@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="listeners" javaclass="com.wm.util.Values">
+    <record name="FTPListener@8021" javaclass="com.wm.util.Values">
+      <number name="port" type="Integer">8021</number>
+      <value name="protocol">FTP</value>
+      <value name="pkg">Demo_File_Converter</value>
+      <value name="enabled">true</value>
+      <value name="key">FTPListener@8021</value>
+      <value name="uniqueID">3f37a4ba13094acfb253225b099735c1</value>
+      <value name="portAlias">ftp</value>
+      <value name="portDescription">Integration Server FTP port: 8021</value>
+      <value name="factoryKey">webMethods/FTP</value>
+      <value name="configURL">/WmRoot/configFTP.dsp</value>
+      <value name="provider">webMethods</value>
+      <value name="pasvAddr"></value>
+    </record>
+  </record>
+  <record name="access" javaclass="com.wm.util.Values">
+    <record name="FTPListener@8021" javaclass="com.wm.util.Values">
+      <null name="home"/>
+      <value name="default">include</value>
+      <record name="nodes" javaclass="com.wm.util.StringSet">
+        <list name="elements">
+        </list>
+      </record>
+      <value name="key">FTPListener@8021</value>
+    </record>
+  </record>
+</Values>

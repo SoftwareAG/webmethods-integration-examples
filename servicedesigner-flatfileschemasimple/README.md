@@ -4,6 +4,7 @@ This example shows you how to use service designer to
 
 * create a flat file schema via wizard to parse a file with a fixed structure.
 * Put and get input and output via ftp.
+* Put and get input and output from/to a loca ldirectory via filepolling.
 
 A description hwo to build the complete example yourself can be found in [this article in our TECHCommunity](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Simple%20flat%20file%20parsing%20with%20the%20webMethods%20flat%20file%20adapter).
 
@@ -63,18 +64,49 @@ If you want to have it quick and easy,
 Make sure, the FTP port is enabled. The example below it is on port 8021. 
 An example file can be found in the Ressources dirctory of this package, if you may need to adjust the local path according to the location of your Installation:
 
+```shell
 cd C:\wMServiceDesigner\IntegrationServer\packages\Demo_File_Converter\resources
 ftp
 open localhost 8021
 cd /ns/DemoFileConverter/ftp/bankStatementFileToJson
 put DemoBankStatement01.csv file_01.csv;application:x-wmflatfile
 get file_01.csv
+```
 
+for xml you need to cd to the xml processing service:
+```shell
 cd /ns/DemoFileConverter/ftp/bankStatementFileToXML
 put DemoBankStatement01.csv file_02.csv;application:x-wmflatfile
 get file_02.csv
+```
 
 Inspect the output files in your local directory.
+
+#### Test it using filepoller
+
+The package contains a filepoller using the following local directories:
+
+C:\FilePoller\Json\in
+C:\FilePoller\Json\work
+C:\FilePoller\Json\done
+C:\FilePoller\Json\error
+
+You need to create those directories in order to use the example. If you want or need to place them somewhere else (e.g. because you do not have write access to C:/, you need to change the poller. In order to do so go to the IS admin page (http://localhost:5555/), go to Security - Ports and click the port C:\FilePoller\Json\in. Click Edit File Polling Configuration, confirm, that the port will be disabled for the configuration and adjust the fields 
+* Monitoring Directory
+* Working Directory (optional) 	
+* Completion Directory (optional)
+* Error Directory (optional) 	
+make also sure to set Enable back to Yes.
+
+The called service will write the result back to the working directory. For security reasons local writes of Integration Server / Microservice Runtime need to be authorised. This is done in the file fileAccessControl.cnf in the directory config of the WmPublic package, e.g. in C:\Programs\ServiceDesigner\IntegrationServer\packages\WmPublic\config. Add the work directoy to the allowedWritePaths of this file, if you left th paths as in my example, the file should look like
+
+```shell
+allowedWritePaths=C:\\FilePoller\\Json\\work
+allowedReadPaths=
+allowedDeletePaths=
+```
+
+Copy the sample file DemoBankStatement01 from C:\Programs\ServiceDesigner\IntegrationServer\packages\Demo_File_Converter\resources to C:\FilePoller\Json\in (or use the according directories in your installation). After the polling interval (5 seconds in the example) the poller will pick up the file and the processing service will write the ouput to the work directory (e.g. C:\FilePoller\Json\work), with the extension .json and the prefix FilePolling and a timestamp. The processed input file will be moved to the completion directory (e.g. C:\FilePoller\Json\done).
 
 
 ### Diagnosis

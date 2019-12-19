@@ -21,12 +21,47 @@
           <value name="node_subtype">unknown</value>
           <value name="node_comment"></value>
           <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">ffdata</value>
+          <value name="field_type">object</value>
+          <value name="field_dim">0</value>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
             <value name="field_usereditable">true</value>
             <value name="field_largerEditor">false</value>
             <value name="field_password">false</value>
           </record>
           <value name="is_public">false</value>
-          <value name="field_name">inData</value>
+          <value name="field_name">fileName</value>
+          <value name="field_type">string</value>
+          <value name="field_dim">0</value>
+          <array name="field_options" type="value" depth="1">
+          </array>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_usereditable">true</value>
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">originalFileName</value>
           <value name="field_type">string</value>
           <value name="field_dim">0</value>
           <array name="field_options" type="value" depth="1">
@@ -49,25 +84,6 @@
       <value name="form_qualified">false</value>
       <value name="is_global">false</value>
       <array name="rec_fields" type="record" depth="1">
-        <record javaclass="com.wm.util.Values">
-          <value name="node_type">record</value>
-          <value name="node_subtype">unknown</value>
-          <value name="node_comment"></value>
-          <record name="node_hints" javaclass="com.wm.util.Values">
-            <value name="field_usereditable">true</value>
-            <value name="field_largerEditor">false</value>
-            <value name="field_password">false</value>
-          </record>
-          <value name="is_public">false</value>
-          <value name="field_name">outJson</value>
-          <value name="field_type">string</value>
-          <value name="field_dim">0</value>
-          <array name="field_options" type="value" depth="1">
-          </array>
-          <value name="nillable">true</value>
-          <value name="form_qualified">false</value>
-          <value name="is_global">false</value>
-        </record>
       </array>
       <value name="modifiable">true</value>
     </record>
@@ -78,7 +94,6 @@
   <value name="prefetch">no</value>
   <value name="cache_ttl">15</value>
   <value name="prefetch_level">1</value>
-  <value name="template">bankStatementFileToJson_ftpOutput.xml</value>
   <value name="audit_level">off</value>
   <value name="check_internal_acls">no</value>
   <value name="icontext_policy">$null</value>

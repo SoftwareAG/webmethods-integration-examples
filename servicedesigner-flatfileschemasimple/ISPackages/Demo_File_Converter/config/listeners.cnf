@@ -16,6 +16,35 @@
       <value name="provider">webMethods</value>
       <value name="pasvAddr"></value>
     </record>
+    <record name="FilePollingListener:C:\FilePoller\Json\in" javaclass="com.wm.util.Values">
+      <value name="port">C:\FilePoller\Json\in</value>
+      <value name="protocol">FilePolling</value>
+      <value name="pkg">Demo_File_Converter</value>
+      <value name="enabled">true</value>
+      <value name="key">FilePollingListener:C:\FilePoller\Json\in</value>
+      <value name="portAlias">JsonBankStatementFilePoller</value>
+      <value name="portDescription">Integration Server FilePolling port: 0</value>
+      <value name="factoryKey">webMethods/FilePolling</value>
+      <value name="configURL">/WmFlatFile/configFilePolling.dsp</value>
+      <value name="provider">webMethods</value>
+      <value name="monitorDir">C:\FilePoller\Json\in</value>
+      <value name="workDir">C:\FilePoller\Json\work</value>
+      <value name="completionDir">C:\FilePoller\Json\done</value>
+      <value name="errorDir">C:\FilePoller\Json\error</value>
+      <value name="recursive">no</value>
+      <value name="clusterEnabled">no</value>
+      <value name="cleanupAtStartup">yes</value>
+      <value name="runUser">Administrator</value>
+      <value name="processingService">DemoFileConverter.FlatfilePolling:bankStatementFileToJson</value>
+      <value name="filePollingInterval">5</value>
+      <value name="logMinMessage">no</value>
+      <value name="NFSDirectories">no</value>
+      <value name="cleanUpFileAge">7</value>
+      <value name="cleanUpInterval">24</value>
+      <value name="maxThreads">10</value>
+      <value name="maxFilesPerCycle">-1</value>
+      <value name="lockFileExtension">.lock</value>
+    </record>
   </record>
   <record name="access" javaclass="com.wm.util.Values">
     <record name="FTPListener@8021" javaclass="com.wm.util.Values">
@@ -26,6 +55,15 @@
         </list>
       </record>
       <value name="key">FTPListener@8021</value>
+    </record>
+    <record name="FilePollingListener:C:\FilePoller\Json\in" javaclass="com.wm.util.Values">
+      <null name="home"/>
+      <value name="default">include</value>
+      <record name="nodes" javaclass="com.wm.util.StringSet">
+        <list name="elements">
+        </list>
+      </record>
+      <value name="key">FilePollingListener:C:\FilePoller\Json\in</value>
     </record>
   </record>
 </Values>

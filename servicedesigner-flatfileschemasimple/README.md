@@ -91,7 +91,7 @@ C:\FilePoller\Json\work
 C:\FilePoller\Json\done
 C:\FilePoller\Json\error
 
-You need to create those directories in order to use the example. If you want or need to place them somewhere else (e.g. because you do not have write access to C:/, you need to change the poller. In order to do so go to the IS admin page (http://localhost:5555/), go to Security - Ports and click the port C:\FilePoller\Json\in. Click Edit File Polling Configuration, confirm, that the port will be disbaled for the configuration and adjust the fields 
+You need to create those directories in order to use the example. If you want or need to place them somewhere else (e.g. because you do not have write access to C:/, you need to change the poller. In order to do so go to the IS admin page (http://localhost:5555/), go to Security - Ports and click the port C:\FilePoller\Json\in. Click Edit File Polling Configuration, confirm, that the port will be disabled for the configuration and adjust the fields 
 * Monitoring Directory
 * Working Directory (optional) 	
 * Completion Directory (optional)

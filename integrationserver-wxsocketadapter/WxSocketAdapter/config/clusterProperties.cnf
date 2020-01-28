@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<clusterProps>
+  <listeners>
+    <runtimeModeLimit>standby</runtimeModeLimit>
+  </listeners>
+  <listenerNotifications>
+    <callbackScheme>1</callbackScheme>
+  </listenerNotifications>
+  <pollingNotifications>
+    <callbackScheme>1</callbackScheme>
+    <runtimeModeLimit>standby</runtimeModeLimit>
+    <template className="com.wm.adapter.wxSocketAdapter.notification.SocketReadAsync">
+      <callbackScheme>1</callbackScheme>
+      <runtimeModeLimit>standby</runtimeModeLimit>
+    </template>
+    <template className="com.wm.adapter.wxSocketAdapter.notification.SocketReadAsync">
+      <callbackScheme>1</callbackScheme>
+      <runtimeModeLimit>standby</runtimeModeLimit>
+    </template>
+  </pollingNotifications>
+</clusterProps>

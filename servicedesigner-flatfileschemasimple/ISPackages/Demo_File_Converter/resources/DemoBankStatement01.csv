@@ -1,0 +1,3 @@
+Auftragskonto;Buchungstag;Valutadatum;Buchungstext;Verwendungszweck;Beguenstigter/Zahlungspflichtiger;Kontonummer;BLZ;Betrag;Waehrung;Info
+DE97100100000000123456;01.10.2019;03.10.2019;debit note;Birdseed;ACME;DE85200100000000654321;20010000;300,00;EUR;
+DE97100100000000123456;02.10.2019;04.10.2019;debit note;Springs;EMCA;DE17300300000000333555;30030000;500,95;EUR;

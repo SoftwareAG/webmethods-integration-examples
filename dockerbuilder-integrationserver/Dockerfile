@@ -47,6 +47,6 @@ EXPOSE 8092 8093 5555 9999
 COPY --from=builder --chown=1724:1724 $SAG_HOME $SAG_HOME
 
 # entrypoint scripts
-ADD entrypoint.sh $SAG_HOME
+ADD --chown=1724:1724 entrypoint.sh $SAG_HOME
 
 ENTRYPOINT $SAG_HOME/entrypoint.sh

@@ -27,6 +27,9 @@ Those examples show you how to develop, deploy, configure, and use custom coded 
 1. [WxSocketAdapter (source code, eclipse project, installation guide)](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/integrationserver-wxsocketadapter)
 This adapter demonstrates how to connect to low-level resources and devices within the Integration Server. It connects to TCP/IP raw sockets, as well as serial communication devices. It delivers two way communication to the devices and channels (reading/writing).
 
+## Misc
+
+1. [webmethods-hybridintegration](https://github.com/SoftwareAG/webmethodsio-hybridintegration) - step by step how to upload a webMethods Integration Server (IS) workflow to the Webmethods.io Integration (wm.io) cloud
 ______________________
 For more information you can Ask a Question in the [TECHcommunity Forums](http://techcommunity.softwareag.com/home/-/product/name/command-central).
 

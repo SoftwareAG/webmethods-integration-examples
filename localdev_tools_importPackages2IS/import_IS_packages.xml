@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<!-- 
+Usages:
+
+1) Import required packages from git repo into Designer(eclipse) workspace.
+2) If we want to import set of packages then run 'import-multiple-packages' targets with 'packages-to-import' property.
+	e.g : ant -f build.xml import-multiple-packages -DwebMethods.home=C:\SoftwareAG -DrepoLocation=C:\Users\dummy\git\repository-tmp -Dpackages-to-import="package1,package2,package3"
+3) If we want to import all the packages from the local repositroy then use 'import-packages-from-repo' 
+	e.g : ant -f build.xml import-packages-from-repo -DwebMethods.home=C:\SoftwareAG -DrepoLocation=C:\Users\dummy\git\repository-tmp
+4) Refresh Server Node in Designer Service Development
+
+Author: Biswa Bhusan Dalai (Software AG)
+
+SPDX-License-Identifier: Apache-2.0
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.    
+   
+-->
+
+<project default="import-multiple-packages" basedir="." xmlns:antcontrib="antlib:net.sf.antcontrib" xmlns:xmltask="antlib:com.oopsconsultancy.xmltask">
+	
+	<property file = "build.properties"/>
+
+	<property name="repoLocation" value="C:\githere\" />
+	<property name="packages-to-import" value="package_1,package_2" />
+	<property name="server-host" value="localhost" />
+	<property name="server-port" value="5555"/>
+	<property name="userid" value="Administrator"/>
+	<property name="password" value="manage" />
+	<property name="webMethods.home" value="C:\SoftwareAG" />
+	<property name="integration-server-packages" value="${webMethods.home}\IntegrationServer\instances\default\packages" />
+	<!-- for MSR >= 10.5 change this to ${webMethods.home}\IntegrationServer\packages -->
+	
+	<path id="classpath.ant">
+		<fileset file="${webMethods.home}/common/lib/ant/ant-contrib-1.0b3.jar"/>
+	</path>
+
+	<target name="import-packages-from-repo">
+		<taskdef resource="net/sf/antcontrib/antcontrib.properties" uri="antlib:net.sf.antcontrib" classpathref="classpath.ant" />
+		<taskdef uri="antlib:net.sf.antcontrib" resource="net/sf/antcontrib/antlib.xml" classpathref="classpath.ant" />
+		<dirset id="dist.contents" dir="${repoLocation}">
+			<include name="*"/>
+		</dirset>
+		<property name="webMethods.projects.filter" refid="dist.contents" />
+
+		<antcontrib:for list="${webMethods.projects.filter}" delimiter=";" param="val">
+			<sequential>
+				<antcall target="import-package">
+					<param name="packageName" value="@{val}" />
+				</antcall>
+			</sequential>
+		</antcontrib:for>
+		<antcontrib:for list="${webMethods.projects.filter}" delimiter=";" param="val">
+			<sequential>
+				<antcall target="activate-package">
+					<param name="packageName" value="@{val}" />
+				</antcall>
+			</sequential>
+		</antcontrib:for>
+	</target>
+
+	<target name="import-multiple-packages">
+		<taskdef resource="net/sf/antcontrib/antcontrib.properties" uri="antlib:net.sf.antcontrib" classpathref="classpath.ant" />
+		<taskdef uri="antlib:net.sf.antcontrib" resource="net/sf/antcontrib/antlib.xml" classpathref="classpath.ant" />
+		<antcontrib:for list="${packages-to-import}" delimiter="," param="val">
+			<sequential>
+				<antcall target="import-package">
+					<param name="packageName" value="@{val}" />
+				</antcall>
+			</sequential>
+		</antcontrib:for>
+		<antcontrib:for list="${packages-to-import}" delimiter="," param="val">
+			<sequential>
+				<antcall target="activate-package">
+					<param name="packageName" value="@{val}" />
+				</antcall>
+			</sequential>
+		</antcontrib:for>
+	</target>
+
+	<target name="import-package">
+		<exec executable="cmd">
+			<arg line="/c mklink /j ${integration-server-packages}\${packageName} ${repoLocation}\${packageName}" />
+		</exec>
+		<exec executable="cmd">
+			<arg line="/c ${integration-server-packages}\..\bin\jcode.bat make ${packageName}" />
+		</exec>
+	</target>
+
+	<target name="activate-package">
+		<get src="http://${server-host}:${server-port}/invoke/wm.server.packages:packageActivate?package=${packageName}" dest="./dummy.html" username="${userid}" password="${password}" />
+		<get src="http://${server-host}:${server-port}/invoke/wm.server.packages:packageEnable?package=${packageName}" dest="./dummy.html" username="${userid}" password="${password}" />
+		<get src="http://${server-host}:${server-port}/invoke/wm.server.packages:packageReload?package=${packageName}" dest="./dummy.html" username="${userid}" password="${password}" />
+		<delete file="./dummy.html" />
+	</target>
+
+</project>

@@ -37,20 +37,20 @@ Please be aware that support for windows junctions have been intrduced as a fix 
 
 ## Get package to local environment
 
-1. Set up your local Workspace. If you alreday have a local workspace holding you packages and tools project, continue with _3. Import the packages_
+1. Set up your local Workspace. If you alreday have a local workspace holding you packages and tools project, continue with (3).
    * Clone the repository holding you packages to a local directory. If you did the clone ouside Deisgner, add the local GIT repository to the repository list of Deisgner.
    * Import the package folders using the Import Projects menu entry.
 2. Only if not alreday done by somebody else for the current repository: Create the tools project andplace the ant script
    * Create a project for holding the ant file and it properties.
    * Copy the ant script import_IS_packages.xml and property file build.properties to the project directory.
 3. Import the packages
-* Adjust the properties in build.properties to your local settings. The default target of the ant script is import-multiple-packages which will import the packages listed in the properties file in the given order.
-* Check the path to the package directory inside you installation, which is set in the ant sript. As Microservice Runtime starting with 10.5 does not have instanced anymore, there is a difference for IS and MSR:
-  * For Integration Server it needs to be 	${webMethods.home}\IntegrationServer\instances\default\packages"
-  * For Microservice Runtime >= 10.5 it needs to be  ${webMethods.home}\IntegrationServer\packages
-* Open the ANT script with the ant editor in Designer.
-* Run the Ant script
-* Refresh the Server in the Service Development perspective.
+   * Adjust the properties in build.properties to your local settings. The default target of the ant script is import-multiple-packages which will import the packages listed in the properties file in the given order.
+   * Check the path to the package directory inside you installation, which is set in the ant sript. As Microservice Runtime starting with 10.5 does not have instanced anymore, there is a difference for IS and MSR:
+     * For Integration Server it needs to be 	${webMethods.home}\IntegrationServer\instances\default\packages"
+     * For Microservice Runtime >= 10.5 it needs to be  ${webMethods.home}\IntegrationServer\packages
+   * Open the ANT script with the ant editor in Designer.
+   * Run the Ant script
+   * Refresh the Server in the Service Development perspective.
 
 ```bash
 

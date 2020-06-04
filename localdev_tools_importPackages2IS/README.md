@@ -62,17 +62,13 @@ The whole process works fine as well if having multiple git repositories in the 
    * Copy the ant script import_IS_packages.xml and property file build.properties to the project directory.
    * Adjust the build.properties to the correct common settings for the project (package list, standard install location, standard port). The default target of the ant script is import-multiple-packages which will import the packages listed in the properties file in the given order.
    * Check the path to the package directory inside you installation, which is set in the ant sript. As Microservice Runtime starting with 10.5 does not have instanced anymore, there is a difference for IS and MSR:
-     * For Integration Server it needs to be 	${webMethods.home}\IntegrationServer\instances\default\packages"
-     * For Microservice Runtime >= 10.5 it needs to be  ${webMethods.home}\IntegrationServer\packages
+     * For Integration Server it needs to be `${webMethods.home}\IntegrationServer\instances\default\packages`
+     * For Microservice Runtime >= 10.5 it needs to be `${webMethods.home}\IntegrationServer\packages`
 3. Import the packages
    * Optional: Adjust the properties in build.properties to specific local settings (e.g. different local git directory). 
    * Open the ANT script with the ant editor in Designer.
    * Run the Ant script.
    * Refresh the Server in the Service Development perspective.
-
-```bash
-
-```
 
 _______________
 Contact us at [TECHcommunity](mailto:technologycommunity@softwareag.com?subject=Github/SoftwareAG) if you have any questions.

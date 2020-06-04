@@ -13,8 +13,8 @@ To get a versioned IS package into the local Integration Server as a local servi
 
 * Import the package directory as project into Designer with Import project from Git perspective (This can be done for multiple packages at once).
 * Create symbolic links in the package directory of Integration Server pointing to the package directories in the git directory.
-** mklink /j <targetLocation> <sourceLocation>  [for window]
-** ln -s <sourceLocation>  <targetLocation> [for mac and linux]
+   * mklink /j <targetLocation> <sourceLocation>  [for window]
+   * ln -s <sourceLocation>  <targetLocation> [for mac and linux]
 
 Afterwards either a restart of IS or an activation and reload of the packages is necessary.
 

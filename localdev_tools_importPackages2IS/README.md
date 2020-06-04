@@ -13,8 +13,8 @@ To get a versioned IS package into the local Integration Server as a local servi
 
 * Import the package directory as project into Designer with Import project from Git perspective (This can be done for multiple packages at once).
 * Create symbolic links in the package directory of Integration Server pointing to the package directories in the git directory.
-   * mklink /j <targetLocation> <sourceLocation>  [for window]
-   * ln -s <sourceLocation>  <targetLocation> [for mac and linux]
+   * `mklink /j <targetLocation> <sourceLocation>`  [for window]
+   * `ln -s <sourceLocation>  <targetLocation>` [for mac and linux]
 
 Afterwards either a restart of IS or an activation and reload of the packages is necessary.
 
@@ -34,13 +34,30 @@ Please be aware that support for windows junctions have been intrduced as a fix 
 
 ## Preparation
 
+The batch file/ant properties should be created centrally for every project. This ensures that the proper loading order is defined.
 
-## Get package to local environment
+As every package in IS is associated with a separate eclipse project one way is to use a dedicated tools project for in every git repository to host the ant script and it's properties file, so every developer can just start the ant script when setting up/recreating his/hers local development environment. This means, the ant script is replicated for every project, but also gives the flexibility for adjusting for specific needs. 
+
+The whole process works fine as well if having multiple git repositories in the same Designer workspace.
+
+### Preparation (dedicated team for every project responsible)
+
+•	Copy/Adjust the ant script into the tools directory of every project
+•	Set specific build properties for every project
+
+### When setting up local Dev Environment
+
+* First time setup only: Import all eclipse project folders (package dir / tools dir) into eclipse workspace
+* Optional:Adjust property file, if local setup differs from central configuration (e.g. path to users local GIT directory).
+* Run the ant script from within eclipse
+
+
+## The actual process
 
 1. Set up your local Workspace. If you alreday have a local workspace holding you packages and tools project, continue with (3).
-   * Clone the repository holding you packages to a local directory. If you did the clone ouside Deisgner, add the local GIT repository to the repository list of Deisgner.
-   * Import the package folders using the Import Projects menu entry.
-2. Only if not alreday done by somebody else for the current repository: Create the tools project andplace the ant script
+   * Clone the repository holding you packages to a local directory. If you did not do the clone with Designer GIT perspective, add the local GIT repository to the repository list of Deisgner.
+   * Import the package folders using the Import Projects menu entry as Designer/Eclipse projects.
+2. Only if not alreday done by somebody else for the current repository: Create the tools project and place the ant script
    * Create a project for holding the ant file and it properties.
    * Copy the ant script import_IS_packages.xml and property file build.properties to the project directory.
 3. Import the packages

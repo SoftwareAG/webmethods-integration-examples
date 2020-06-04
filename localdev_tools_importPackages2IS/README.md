@@ -26,13 +26,13 @@ The original script was written by Biswa Bhusan Dalai (Software AG).
 
 Designer Workstation 10.3 or higher.
 
-Please be aware that support for windows junctions have been intrduced as a fix to 10.3 ,so you will need at least:
+Please be aware that support for windows junctions have been intrduced as a fix to 10.3, so you will need at least:
 
 * Local Version Control Integration Plug-in to Designer 10.3 Fix 14 or higher
 * Service Development Plug-in to Designer 10.3 Fix 16 or higher
 
 
-## Preparation
+## Concept
 
 The batch file/ant properties should be created centrally for every project. This ensures that the proper loading order is defined.
 
@@ -42,8 +42,8 @@ The whole process works fine as well if having multiple git repositories in the 
 
 ### Preparation (dedicated team for every project responsible)
 
-•	Copy/Adjust the ant script into the tools directory of every project
-•	Set specific build properties for every project
+* Copy/Adjust the ant script into the tools directory of every project
+* Set specific build properties for every project
 
 ### When setting up local Dev Environment
 

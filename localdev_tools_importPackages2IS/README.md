@@ -73,7 +73,7 @@ The whole process works fine as well with multiple git repositories in the same 
    * Run the Ant script (with the target import-multiple-packages).
    * Refresh the Server in the Service Development perspective.
 
-## Alternatives targets
+## Alternatives targets 
 
 ### import-packages-from-repo
 

@@ -10,15 +10,20 @@ Those examples show you how to use dockerbuilder to create you own images using 
 1. [Dockerbuilder example for Integration Server](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-integrationserver)
 2. [Dockerbuilder example for Microservice Runtime](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/dockerbuilder-microserviceruntime)
 
-## Service Designer
+## Service Designer / Service Development
 
-Those examples show you how to use Service Designer to quickly develop typical services and/or integrations. They are mainly intented to show typical concepts, so they will not be "production ready" as rhey are!
+Those examples show you how to use Service Designer to quickly develop typical services and/or integrations. They are mainly intented to show typical concepts, so they will not be "production ready" as they are! They will work with Service Designer as well as Desginer Workstation.
+
+### Development Patterns
 
 1. [Using a flat file schema to parse a file](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/servicedesigner-flatfileschemasimple)
 This demonstrate how to build a flat file schema using the wizard from a given flat file and use it to convert the file to json or xml.
 2. [Dynamic conversion of a flat file to xml or json](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/servicedesigner-csvconverter)
 This demonstrates the usage of service Desginer to build docker containers and exposing Rest APIs. The example will convert a csv dynamically toxmlor json.
 
+### Local Development Toolings
+
+1. [Import Integration Server packages automation](https://github.com/SoftwareAG/webmethods-integration-examples/tree/master/localdev_tools_importPackages2IS) This shows how to import mutliple packages retrieved from version control into the local Integration Server automated with an ANT script.
 
 ## Adapters
 

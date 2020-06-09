@@ -4,7 +4,7 @@
 
 This project demonstrates how to get multiple packages Integration Server packages from a git repository into your local workspace with the provided ant script. The intent ist to automate the task "Move package to IS", especially for projects with many packages, when Designer Workstation or service Designer is setup the first time or reinstalled.
 
-A more elaborate description can be found in [this article in oru TechCommunity](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/How%20to%20automate%20package%20import%20to%20a%20local%20Integration%20Server#ScriptCreation).
+A more elaborate description can be found in [this article in our TechCommunity](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/How+to+automate+package+import+to+a+local+Integration+Server).
 
 ## How it works
 

@@ -25,6 +25,8 @@ The provided ant sript automates the creation of the links for a windows environ
 
 The original script was written by Biswa Bhusan Dalai (Software AG).
 
+*Disclaimer:* The services used for package activation and package reload are not part of the documented build in services and may be changed in future version without prior notification.
+
 ## Requirements
 
 Designer Workstation 10.3 or higher.

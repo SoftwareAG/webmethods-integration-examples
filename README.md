@@ -36,9 +36,9 @@ This adapter demonstrates how to connect to low-level resources and devices with
 
 1. [webmethods-hybridintegration](https://github.com/SoftwareAG/webmethodsio-hybridintegration) - step by step how to upload a webMethods Integration Server (IS) workflow to the Webmethods.io Integration (wm.io) cloud
 ______________________
-For more information you can Ask a Question in the [TECHcommunity Forums](http://techcommunity.softwareag.com/home/-/product/name/command-central).
+For more information you can Ask a Question in the [TECHcommunity Forums](https://tech.forums.softwareag.com/tags/c/forum/1/webMethods).
 
-You can find additional information in the [Software AG TECHcommunity](http://tech.forums.softwareag.com/techjforum/forums/list.page?product=command-central).
+You can find additional information in the [Software AG TECHcommunity](https://tech.forums.softwareag.com/tag/webmethods).
 ______________________
 These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
 

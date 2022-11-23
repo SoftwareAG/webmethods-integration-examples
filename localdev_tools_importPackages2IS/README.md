@@ -1,5 +1,7 @@
 # Import Integration Server packages automation
 
+**Disclaimer:** This script and article were created because in the past it was not possible to move multiple packages at once to Integration Server. With recent Designer versions you can now do this directly from the context menu. Therefore there will be probably no updates to this script from me.
+
 ## Overview
 
 This project demonstrates how to get multiple packages Integration Server packages from a git repository into your local workspace with the provided ant script. The intent ist to automate the task "Move package to IS", especially for projects with many packages, when Designer Workstation or service Designer is setup the first time or reinstalled.
